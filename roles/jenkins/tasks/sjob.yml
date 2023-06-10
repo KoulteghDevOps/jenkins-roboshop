@@ -15,7 +15,7 @@
   ansible.builtin.template:
     src: sjob.xml
     dest: /tmp/jenkins-test.xml
-  when: jenkins_job_status.failed
+  when: jenkins_job_status.failed or override
 
 - name: Create Jenkins Job
   community.general.jenkins_job:
@@ -24,5 +24,5 @@
     password: roboshop123
     url: http://172.31.12.82:8080
     user: roboshop
-  when: jenkins_job_status.failed
+  when: jenkins_job_status.failed or override
   
