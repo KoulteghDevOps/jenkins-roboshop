@@ -1,3 +1,3 @@
 sjobs:
-  - { git_repo_url:https://github.com/KoulteghDevOps/terraform-roboshop.git, job_name: terraform-roboshop }
-  - { git_repo_url:https://github.com/KoulteghDevOps/Ansible-Roboshop-Project.git, job_name: ansible-roboshop }
+  - { get_repo_url: https://github.com/KoulteghDevOps/terraform-roboshop.git, job_name: Terraform-Roboshop }
+  - { get_repo_url: https://github.com/KoulteghDevOps/Ansible-Roboshop-Project.git, job_name: Ansible-Roboshop }
