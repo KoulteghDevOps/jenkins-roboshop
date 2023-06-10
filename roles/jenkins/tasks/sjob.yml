@@ -1,3 +1,15 @@
+- name: Ckecking If Jenkins File Exists
+  community.general.jenkins_job_info:
+    name: "{{item.job_name}}"
+    password: roboshop123
+    url: http://172.31.12.82:8080
+    user: roboshop
+  register: jenkins_job_status
+
+- name: Debug
+  debug:
+    msg: "{{jenkins_job_status}}"
+
 - name: Create Xml File
   ansible.builtin.template:
     src: sjob.xml
