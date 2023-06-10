@@ -23,4 +23,5 @@
     password: roboshop123
     url: http://172.31.12.82:8080
     user: roboshop
+  when: jenkins_job_status.failed
   
