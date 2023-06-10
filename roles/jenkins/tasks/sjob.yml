@@ -6,14 +6,15 @@
     user: roboshop
   register: jenkins_job_status
 
-- name: Debug
-  debug:
-    msg: "{{jenkins_job_status}}"
+# - name: Debug
+#   debug:
+#     msg: "{{jenkins_job_status}}"
 
 - name: Create Xml File
   ansible.builtin.template:
     src: sjob.xml
     dest: /tmp/jenkins-test.xml
+  when: jenkins_job_status.failed
 
 - name: Create Jenkins Job
   community.general.jenkins_job:
