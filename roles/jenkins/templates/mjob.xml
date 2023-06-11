@@ -23,7 +23,7 @@
       <jenkins.branch.BranchSource>
         <source class="jenkins.plugins.git.GitSCMSource" plugin="git@5.1.0">
           <id>107008d9-5e13-458e-ae3f-918c613e993e</id>
-          <remote>{{ item.git_repo_url }}</remote>
+          <remote>{{ item.get_repo_url }}</remote>
           <credentialsId></credentialsId>
           <traits>
             <jenkins.plugins.git.traits.BranchDiscoveryTrait/>

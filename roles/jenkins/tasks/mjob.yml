@@ -14,12 +14,12 @@
 - name: Create Xml File
   ansible.builtin.template:
     src: mjob.xml
-    dest: /tmp/jenkins-test.xml
+    dest: /tmp/testm.xml
   when: jenkins_job_status.failed or override
 
 - name: Create Jenkins Job
   community.general.jenkins_job:
-    config:  "{{ lookup('file', '/tmp/jenkins-test.xml') }}"
+    config:  "{{ lookup('file', '/tmp/testm.xml') }}"
     name: "{{item.job_name}}"
     password: roboshop123
     url: http://172.31.12.82:8080
