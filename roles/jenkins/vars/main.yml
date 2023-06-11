@@ -4,4 +4,4 @@ sjobs:
   - { get_repo_url: https://github.com/KoulteghDevOps/aws_ssm_parameter_store.git, job_name: awsssmparameter-store }
 
 mjobs:
-  - { get_repo_url: https://github.com/KoulteghDevOps/cart.git, job_name: Cart }
+  - { get_repo_url: https://github.com/KoulteghDevOps/cart.git, job_name: cart }
