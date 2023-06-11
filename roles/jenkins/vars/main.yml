@@ -2,3 +2,6 @@ sjobs:
   - { get_repo_url: https://github.com/KoulteghDevOps/terraform-roboshop.git, job_name: Terraform-Roboshop }
   - { get_repo_url: https://github.com/KoulteghDevOps/Ansible-Roboshop-Project.git, job_name: Ansible-Roboshop }
   - { get_repo_url: https://github.com/KoulteghDevOps/aws_ssm_parameter_store.git, job_name: awsssmparameter-store }
+
+mjobs:
+  - { get_repo_url: https://github.com/KoulteghDevOps/cart.git, job_name: Cart }

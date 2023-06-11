@@ -1,4 +1,9 @@
-- name: Include tsk list in play
+- name: Single Job Pipeline
   ansible.builtin.include_tasks:
     file: sjob.yml
   loop: "{{sjobs}}"
+
+- name: Multi Job Pipeline
+  ansible.builtin.include_tasks:
+    file: mjob.yml
+  loop: "{{mjobs}}"
