@@ -21,7 +21,7 @@ def call() {
           sh 'sonar-scanner -Dsonar.projectKey=${component} -Dsonar.host.url=http://172.31.95.180:9000 -Dsonar.login=admin -Dsonar.password=admin123'
         }
       }
-      stage('Unit Test Cases') {
+      stage('echo Unit Test Cases') {
         steps {
           sh 'Unit Test Case'
         }
