@@ -5,3 +5,8 @@ sjobs:
 
 mjobs:
   - { get_repo_url: https://github.com/KoulteghDevOps/cart.git, job_name: cart }
+  - { get_repo_url: https://github.com/KoulteghDevOps/catalogue.git, job_name: catalogue }
+  - { get_repo_url: https://github.com/KoulteghDevOps/user.git, job_name: user }
+  - { get_repo_url: https://github.com/KoulteghDevOps/shipping.git, job_name: shipping }
+  - { get_repo_url: https://github.com/KoulteghDevOps/patment.git, job_name: payment }
+  - { get_repo_url: https://github.com/KoulteghDevOps/dispatch.git, job_name: dispatch }
