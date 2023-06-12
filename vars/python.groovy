@@ -18,7 +18,7 @@ def call() {
     stages {
       stage('Code Quality') {
         steps {
-          sh 'echo Code Quality'
+          sh 'sonar-scanner -Dsonar.projectKey=${component}'
         }
       }
       stage('Unit Test Cases') {
