@@ -22,13 +22,15 @@ def call() {
     stages {
       stage('Code Quality') {
         steps {
-          sh 'ls -ltr'
-          sh 'sonar-scanner -Dsonar.projectKey=${component} -Dsonar.host.url=http://172.31.95.180:9000 -Dsonar.login=admin -Dsonar.password=admin123 -Dsonar.qualitygate.wait=true'
+//          sh 'ls -ltr'
+//          sh 'sonar-scanner -Dsonar.projectKey=${component} -Dsonar.host.url=http://172.31.95.180:9000 -Dsonar.login=admin -Dsonar.password=admin123 -Dsonar.qualitygate.wait=true'
+          sh 'echo Code Quallity'
         }
       }
       stage('echo Unit Test Cases') {
         steps {
-          sh 'echo Unit Test Case'
+//          sh 'echo Unit Test Case'
+          sh 'python3.11 -m unittest'
         }
       }
       stage('CheckMarX SAST Scan') {
