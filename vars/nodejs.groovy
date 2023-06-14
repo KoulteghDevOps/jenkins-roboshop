@@ -10,9 +10,9 @@ def call() {
       ansiColor('xterm')
     }
 
-//    environment {
-//      NEXUS = credentials('NEXUS')
-//    }
+    environment {
+      NEXUS = credentials('NEXUS')
+    }
 
     parameters {
       choice(name: 'env', choices: ['dev', 'prod'], description: 'Pick environment')
