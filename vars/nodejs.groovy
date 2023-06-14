@@ -51,11 +51,11 @@ def call() {
           }
         }
         steps {
-          sh 'echo ${env}'
-//          sh 'npm install'
-//          sh 'echo $TAG_NAME >VERSION'
-//          sh 'zip -r ${component}-${TAG_NAME}.zip node_modules server.js VERSION ${schema_dir}'
-//          sh 'curl -f -v -u ${NEXUS_USR}:${NEXUS_PSW} --upload-file ${component}-${TAG_NAME}.zip http://172.31.18.217:8081/repository/${component}/${component}-${TAG_NAME}.zip'
+//          sh 'echo ${env}'
+          sh 'npm install'
+          sh 'echo $TAG_NAME >VERSION'
+          sh 'zip -r ${component}-${TAG_NAME}.zip node_modules server.js VERSION ${schema_dir}'
+          sh 'curl -f -v -u ${NEXUS_USR}:${NEXUS_PSW} --upload-file ${component}-${TAG_NAME}.zip http://172.31.18.217:8081/repository/${component}/${component}-${TAG_NAME}.zip'
 //          sh 'curl -v -u admin:admin123 --upload-file server.js http://localhost:8081/repository/maven-releases/org/cart/server.js'
         }
       }
