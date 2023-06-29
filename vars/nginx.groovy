@@ -51,14 +51,17 @@ def call() {
                     }
                 }
                 steps {
-//          sh 'echo ${env}'
-                    sh 'npm install'
-                    sh 'echo $TAG_NAME >VERSION'
-                    sh 'zip -r ${component}-${TAG_NAME}.zip *'
-                    // Deleting the Jenkinsfile as it is not needed
-                    sh 'zip -d ${component}-${TAG_NAME}.zip Jenkinsfile'
-//          sh 'curl -f -v -u ${NEXUS_USR}:${NEXUS_PSW} --upload-file ${component}-${TAG_NAME}.zip http://172.31.18.217:8081/repository/${component}/${component}-${TAG_NAME}.zip'
-                    sh 'curl -f -v -u admin:admin123 --upload-file ${component}-${TAG_NAME}.zip http://172.31.18.217:8081/repository/${component}/${component}-${TAG_NAME}.zip'
+                  // sh 'echo ${env}'
+                  sh 'npm install'
+                  sh 'echo $TAG_NAME >VERSION'
+                  sh 'zip -r ${component}-${TAG_NAME}.zip *'
+                  // Deleting the Jenkinsfile as it is not needed
+                  // sh 'zip -d ${component}-${TAG_NAME}.zip Jenkinsfile'
+                  // sh 'curl -f -v -u ${NEXUS_USR}:${NEXUS_PSW} --upload-file ${component}-${TAG_NAME}.zip http://172.31.18.217:8081/repository/${component}/${component}-${TAG_NAME}.zip'
+                  // sh 'curl -f -v -u admin:admin123 --upload-file ${component}-${TAG_NAME}.zip http://172.31.18.217:8081/repository/${component}/${component}-${TAG_NAME}.zip'
+                    sh 'aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 878756956432.dkr.ecr.us-east-1.amazonaws.com'
+                    sh 'docker build -t 878756956432.dkr.ecr.us-east-1.amazonaws.com/${component}:${TAG_NAME} .'
+                    sh 'docker push 878756956432.dkr.ecr.us-east-1.amazonaws.com/${component}:${TAG_NAME} .'
                 }
             }
         }
