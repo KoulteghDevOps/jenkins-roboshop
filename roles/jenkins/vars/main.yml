@@ -1,8 +1,10 @@
 sjobs:
-  - { get_repo_url: https://github.com/KoulteghDevOps/terraform-roboshop.git, job_name: Terraform-Roboshop }
-  - { get_repo_url: https://github.com/KoulteghDevOps/Ansible-Roboshop-Project.git, job_name: Ansible-Roboshop }
-  - { get_repo_url: https://github.com/KoulteghDevOps/aws_ssm_parameter_store.git, job_name: awsssmparameter-store }
-  - { get_repo_url: https://github.com/KoulteghDevOps/roboshop_helm.git, job_name: roboshop_helm }
+  - { get_repo_url: https://github.com/KoulteghDevOps/terraform-roboshop.git, job_name: Terraform-Roboshop, file_name: Jenkinsfile }
+  - { get_repo_url: https://github.com/KoulteghDevOps/Ansible-Roboshop-Project.git, job_name: Ansible-Roboshop, file_name: Jenkinsfile }
+  - { get_repo_url: https://github.com/KoulteghDevOps/aws_ssm_parameter_store.git, job_name: awsssmparameter-store, file_name: Jenkinsfile }
+  - { get_repo_url: https://github.com/KoulteghDevOps/aws_ssm_parameter_store.git, job_name: aws-ssm-ps-docker, file_name: Jenkinsfile }
+  - { get_repo_url: https://github.com/KoulteghDevOps/roboshop_helm.git, job_name: roboshop_helm, file_name: Jenkinsfile }
+  - { git_repo_url: https://github.com/KoulteghDevOps/schema_loader.git, job_name: schema_loader, file_name: Jenkinsfile }
 
 mjobs:
   - { get_repo_url: https://github.com/KoulteghDevOps/cart.git, job_name: cart }
@@ -12,3 +14,5 @@ mjobs:
   - { get_repo_url: https://github.com/KoulteghDevOps/payment.git, job_name: payment }
   - { get_repo_url: https://github.com/KoulteghDevOps/dispatch.git, job_name: dispatch }
   - { get_repo_url: https://github.com/KoulteghDevOps/frontend.git, job_name: frontend }
+
+
