@@ -13,7 +13,7 @@
 
 - name: Create Xml File
   ansible.builtin.template:
-    src: sjob.xml
+    src: sjob-xml
     dest: /tmp/jenkins-test.xml
   when: jenkins_job_status.failed or override
 
