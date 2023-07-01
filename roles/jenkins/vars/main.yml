@@ -2,7 +2,7 @@ sjobs:
   - { get_repo_url: https://github.com/KoulteghDevOps/terraform-roboshop.git, job_name: Terraform-Roboshop, file_name: Jenkinsfile }
   - { get_repo_url: https://github.com/KoulteghDevOps/Ansible-Roboshop-Project.git, job_name: Ansible-Roboshop, file_name: Jenkinsfile }
   - { get_repo_url: https://github.com/KoulteghDevOps/aws_ssm_parameter_store.git, job_name: awsssmparameter-store, file_name: Jenkinsfile }
-  - { get_repo_url: https://github.com/KoulteghDevOps/aws_ssm_parameter_store.git, job_name: aws-ssm-ps-docker, file_name: Jenkinsfile }
+  - { get_repo_url: https://github.com/KoulteghDevOps/aws_ssm_parameter_store.git, job_name: aws-ssm-ps-docker, file_name: Jenkinsfile-ps }
   - { get_repo_url: https://github.com/KoulteghDevOps/roboshop_helm.git, job_name: roboshop_helm, file_name: Jenkinsfile }
   - { git_repo_url: https://github.com/KoulteghDevOps/schema_loader.git, job_name: schema_loader, file_name: Jenkinsfile }
 
